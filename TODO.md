@@ -1,0 +1,1 @@
+# TODO: Add Scroll-to-Top Button\n\n✅ **All steps completed**\n\n**Features implemented:**\n• Fixed amber scroll-to-top button (matches design system)\n• Shows after 300px scroll (optimized RAF listener)\n• Smooth scroll to #hero\n• Hover animations + cursor integration\n• Mobile hidden (≤900px), tablet optimized\n• Perfect site integration\n\nScroll down in browser to test!

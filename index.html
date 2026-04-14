@@ -7,7 +7,23 @@
       name="description"
       content="Mouhamad Matar Dramé — Monteur vidéo, Créateur de contenu & Formateur. Medithor Services. Sénégal."
     />
-    <title>Serigne Doc — Medithor Services</title>
+<title>Serigne Doc — Medithor Services</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎬%3C/text%3E%3C/svg%3E" sizes="any">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎬%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/klEQVRYR+2W3Q6CMAyF95zB1wEK7gFwAAAABJRU5ErkJggg==">
+    <meta name="theme-color" content="#D4831A">
+    <link rel="manifest" href="data:application/manifest+json,{
+      \"name\": \"Serigne Doc — Medithor Services\",
+      \"short_name\": \"Medithor\",
+      \"icons\": [{
+        \"src\": \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎬%3C/text%3E%3C/svg%3E\",
+        \"sizes\": \"192x192\",
+        \"type\": \"image/png\"
+      }],
+      \"theme_color\": \"#0A0A0A\",
+      \"background_color\": \"#0A0A0A\",
+      \"display\": \"standalone\"
+    }">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://
@@ -57,18 +73,8 @@
     </div>
 
     <!-- ═══ HERO ═══ -->
-    <section id="hero">
-      <div
-        class="hero-bg"
-        style="
-          background-image: url(&quot;./doc/video.png&quot;);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-
-          background-attachment: fixed;
-        "
-      ></div>
+    <section class="hero-bg" id="hero">
+     
       <div class="hero-bar-top" id="bar-top"></div>
       <div class="hero-bar-bot" id="bar-bot"></div>
       <div class="hero-leak" aria-hidden="true"></div>
@@ -224,13 +230,7 @@
             <strong>@seugn_bi_sn</strong> réunit plus de
             <strong>460 000 abonnés</strong> et 9,7 millions de likes.
           </p>
-          <div class="about-quote">
-            <p>
-              « Chaque image que je monte raconte une histoire. Mon rôle est de
-              faire en sorte que cette histoire traverse l'écran et touche les
-              âmes. »
-            </p>
-          </div>
+          
           <div class="about-tags">
             <span class="about-tag">Adobe Premiere Pro</span>
             <span class="about-tag">CapCut Pro</span>
@@ -395,7 +395,7 @@
               loop
               muted
               playsinline
-              poster="./doc/itel.mp4"
+              poster="./doc/ITEL.mp4"
             >
               <source src="./doc/itel.mp4" type="video/mp4" />
             </video>
@@ -423,7 +423,7 @@
               loop
               muted
               playsinline
-              poster="./doc/xiaomi.mp4"
+              poster="./doc/XIAOMI.mp4"
             >
               <source src="./doc/xiaomi.mp4" type="video/mp4" />
             </video>
@@ -441,36 +441,23 @@
             <div class="work-overlay">
               <span class="cat">ONG · IBP Sénégal</span>
               <img
-                src="./doc/com-dig.jpg"
+                src="./doc/dig.png"
                 alt="TikTok"
-                style="height: auto; width: auto"
+                style="height: 800px; width: auto"
               />
               <h3>Communication Digitale</h3>
             </div>
           </div>
         </div>
-        <div class="work-cell">
-          <div class="work-cell-inner">
-            <div class="work-icon">🎯</div>
-
-            <div class="work-overlay">
-              <img
-                src="./doc/tiktok.jpg"
-                alt="TikTok"
-                style="height: auto; width: center"
-              />
-              <span class="cat">TikTok · Viral</span>
-              <h3>1M+ vues</h3>
-            </div>
-          </div>
-        </div>
+        
+        
         <div class="work-cell">
           <div class="work-cell-inner">
             <div class="work-icon">✨</div>
             <img
-              src="./doc/video1.jpg"
+              src="./doc/seugn_bi.png"
               alt="TikTok"
-              style="height: auto; width: center"
+              style="height:700px; width: 500px"
             />
             <div class="work-overlay">
               <span class="cat">YouTube · Montage</span>
@@ -1005,6 +992,51 @@
         },
         { passive: true },
       );
+    </script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" title="Retour en haut" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 5l-7 7h4v7h6v-7h4l-7-7z"/>
+      </svg>
+    </button>
+
+    <script>
+    // Scroll to top functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollTopBtn = document.querySelector('.scroll-top');
+      let ticking = false;
+      
+      function updateScrollTop() {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+        ticking = false;
+      }
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateScrollTop);
+          ticking = true;
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#hero').scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+      });
+      
+      // Cursor integration
+      scrollTopBtn.addEventListener('mouseenter', () => {
+        document.body.classList.add('scroll-top-hovering');
+      });
+      scrollTopBtn.addEventListener('mouseleave', () => {
+        document.body.classList.remove('scroll-top-hovering');
+      });
+    });
     </script>
   </body>
 </html>
