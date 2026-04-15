@@ -324,9 +324,14 @@ nav.solid{
   .about-grid{gap:4rem}
   .about-frame{padding:2rem;gap:1.5rem}
   
-  /* Services */
-  .svc-item{grid-template-columns:3rem 1fr auto;gap:1.5rem;padding:1.8rem 0}
-  .svc-wa{display:flex;opacity:1;transform:translateX(0)}
+  /* Services - Stack WhatsApp button below description */
+  .svc-item{grid-template-columns:3rem 1fr;gap:1.5rem;padding:1.8rem 0 2.5rem;}
+  .svc-wa{
+    grid-column:1 / -1;
+    margin-top:1.5rem;
+    display:flex;opacity:1;transform:translateX(0);
+    justify-content:center;
+  }
   
   /* Work intro */
   .work-intro{gap:1.5rem}
