@@ -797,6 +797,88 @@ nav.solid{
 }
 
 /* ══════════════════════════════════════
+   SCROLL TO TOP BUTTON
+══════════════════════════════════════ */
+.scroll-top {
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+  z-index: 100;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--ink);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s cubic-bezier(.25,.46,.45,.94);
+  box-shadow: 0 8px 32px rgba(212,131,26,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transform: translateY(20px);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--amber-light);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(212,131,26,.4);
+}
+
+.scroll-top:active {
+  transform: translateY(-2px) scale(.98);
+}
+
+.scroll-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cursor integration for scroll-top */
+body.scroll-top-hovering #cur {
+  width: 48px;
+  height: 48px;
+  background: rgba(212,131,26,.2);
+  border: 1px solid var(--amber);
+}
+
+body.scroll-top-hovering #cur-trail {
+  width: 64px;
+  height: 64px;
+  opacity: .6;
+}
+
+/* Hide on mobile */
+@media (max-width: 900px) {
+  .scroll-top {
+    display: none;
+  }
+}
+
+/* Tablet optimization */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .scroll-top {
+    right: 4vw;
+    bottom: 4vw;
+    width: 52px;
+    height: 52px;
+  }
+  .scroll-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ══════════════════════════════════════
    FOOTER
 ══════════════════════════════════════ */
 footer{

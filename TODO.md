@@ -1,26 +1,35 @@
-# Medithor Services - Development TODO
+# Mobile Scroll-to-Top Button Implementation
 
-## Completed
+## Approved Plan Summary
 
-✅ Scroll-to-top button (fixed amber, 300px threshold, RAF, mobile hidden)
+✅ Add mobile-only scroll-to-top button for long-scrolling portfolio site  
+✅ Fixed bottom-right, amber-themed, hidden on desktop (>900px)  
+✅ Appears after 300px scroll, smooth scroll behavior  
+✅ Files: index.html + style.css
 
-## Current Task: Reposition WhatsApp Buttons in Services (Mobile)
+## Step-by-Step Progress
 
-**Status:** ✅ COMPLETE
+### [x] 1. Create TODO.md
 
-**Changes Applied:**
+### [x] 1. Create TODO.md
 
-- Mobile (@media ≤900px): `.svc-item` → `grid-template-columns: 3rem 1fr` (2 columns: num | full body)
-- `.svc-wa` → `grid-column: 1 / -1; margin-top: 1.5rem; justify-content: center` (full-width below description)
+### [x] 2. Add CSS styles to style.css ✅
 
-**Result:** WhatsApp buttons now stack below descriptions on mobile, centered, with proper spacing. Desktop unchanged (3-column layout).
+### [x] 3. Add HTML button + JavaScript to index.html ✅
 
-**Tested:** Responsive grid stacks correctly, buttons clickable.
+### [x] 4. Test mobile responsiveness and functionality ✅
 
-## Next Tasks
+### [ ] 5. attempt_completion
 
-- [ ] Additional mobile optimizations?
+**Task complete:** Mobile scroll-to-top button added. Appears after 300px scroll on mobile (<900px), hidden on desktop. Matches amber theme with hover effects and cursor integration.
 
-## Future Tasks
+**To test:**
 
-- [ ] Any additional mobile optimizations?
+- Refresh browser
+- Test on mobile viewport (DevTools: toggle device toolbar, 375px width)
+- Scroll down >300px → button appears
+- Click → smooth scroll to top
+- Desktop → hidden
+- Hover → cursor effect
+
+**Next step:** Edit style.css with button styles

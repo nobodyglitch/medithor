@@ -443,7 +443,7 @@
               <img
                 src="./doc/dig.png"
                 alt="TikTok"
-                style="height: 800px; width: auto"
+                style="height: auto; width: auto"
               />
               <h3>Communication Digitale</h3>
             </div>
@@ -1038,5 +1038,58 @@
       });
     });
     </script>
+    <!-- Scroll to top button - Mobile only -->
+    <button class="scroll-top" id="scrollTop" title="Retour en haut" aria-label="Retour en haut de la page">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+    </button>
+
+    <script>
+      // Mobile scroll-to-top functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        // Show/hide on scroll (300px threshold)
+        let ticking = false;
+        function updateButton() {
+          if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+          } else {
+            scrollTopBtn.classList.remove('visible');
+          }
+          ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(updateButton);
+            ticking = true;
+          }
+        });
+        
+        // Smooth scroll to top
+        scrollTopBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        
+        // Custom cursor integration
+        const cursor = document.querySelector('#cur');
+        if (cursor) {
+          scrollTopBtn.addEventListener('mouseenter', () => {
+            document.body.classList.add('scroll-top-hovering');
+          });
+          
+          scrollTopBtn.addEventListener('mouseleave', () => {
+            document.body.classList.remove('scroll-top-hovering');
+          });
+        }
+      });
+    </script>
   </body>
+
 </html>
