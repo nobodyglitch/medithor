@@ -372,7 +372,7 @@ nav.solid{
   position:relative;
   background:linear-gradient(135deg,#1a1510 0%,#0f0c07 100%);
   border:1px solid rgba(255,255,255,.07);
-  padding:3rem;display:flex;flex-direction:column;align-items:center;
+  padding:3rem;display:flex;flex-direction:column;align-items:center;border-radius:16px;
   gap:2rem;
 }
 .about-frame::after{
@@ -380,7 +380,7 @@ nav.solid{
   background:linear-gradient(135deg,rgba(212,131,26,.15),transparent 60%);
   pointer-events:none;
 }
-.about-logo{width:140px;height:140px;object-fit:contain;opacity:.85;filter:drop-shadow(0 0 30px rgba(212,131,26,.25))}
+.about-logo{width:140px;height:140px;object-fit:contain;opacity:.85;border-radius: 50%;filter:drop-shadow(0 0 30px rgba(212,131,26,.25))}
 .about-id{width:100%;border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem}
 .about-id .name{font-family:var(--f-display);font-size:1.1rem;letter-spacing:.08em;color:var(--paper);margin-bottom:.2rem}
 .about-id .handle{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.2em;color:var(--amber);text-transform:uppercase}
